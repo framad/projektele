@@ -1,0 +1,5 @@
+<odoo>
+    <data>
+        <menuitem id="projektele_root" name="ProjekTele" sequence="0"/>
+    </data>
+</odoo>

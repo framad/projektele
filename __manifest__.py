@@ -22,6 +22,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menuitems.views.xml',
+        'views/supplier.views.xml',
+        'views/material.views.xml',
         'views/sale_order_views.xml'
         # 'views/rekapsol.views.xml'
     ],

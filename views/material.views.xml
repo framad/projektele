@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+
+        <record id="projektele_supplier_form" model="ir.ui.view">
+            <field name="name">material</field>
+            <field name="model">projektele.material</field>
+            <field name="arch" type="xml">
+                <form multi_edit="1">
+                   
+                    <sheet>
+                        <group>
+                           
+                            <field name="material_code" string="Kode Material" />
+                            <field name="material_name" string="Nama Material" />
+                            <field name="material_type" string="Tipe Material" />
+                            <field name="material_buy_price" string="Harga Material" />
+                            <field name="related_supplier" string="Supplier" />
+                            
+                            
+                            
+                        </group>
+                       
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="projektele_material_tree" model="ir.ui.view">
+            <field name="name">material</field>
+            <field name="model">projektele.material</field>
+            <field name="arch" type="xml">
+
+                <!-- default_order='tahun desc' -->
+                <tree limit="20">
+                    <field name="material_code" string="Kode Material" required='1'/>
+                            <field name="material_name" string="Nama Material" required='1'/>
+                            <field name="material_type" string="Tipe Material" required='1'/>
+                            <field name="material_buy_price" string="Harga Material" required='1'/>
+                            <field name="related_supplier" string="Supplier" required='1'/>
+                            
+                </tree>
+            </field>
+        </record>
+
+        <record id="projektele_material_kanban" model="ir.ui.view">
+            <field name="name">projektele.material.view.kanban</field>
+            <field name="model">projektele.material</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div class="o_kanban_tags_section">
+                                        <ul>
+                                
+                                            <li>
+                                                Nama material :
+                                                <field name="material_name" />
+                                                
+                                            </li>
+                                            
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        
+
+        <record id="projektele_material_action" model="ir.actions.act_window">
+            <field name="name">material</field>
+            <field name="res_model">projektele.material</field>
+            <field name="view_mode">tree,form,graph,pivot</field>
+
+            <field name="domain"></field>
+
+        </record>
+       
+        <menuitem id="material_data" name="material" sequence='15' parent="projektele_root" action="projektele_material_action"/>
+
+    </data>
+</odoo>

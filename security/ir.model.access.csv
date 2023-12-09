@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_projektele_rekap_so,access_projektele_rekap_so,model_projektele_rekap_so,base.group_user,1,1,1,1
+access_projektele_material,access_projektele_material,model_projektele_material,base.group_user,1,1,1,1
+access_projektele_supplier,access_projektele_supplier,model_projektele_supplier,base.group_user,1,1,1,1
